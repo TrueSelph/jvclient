@@ -1,12 +1,12 @@
 # JVClient (jvclient)
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/TrueSelph/jvserve)
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/TrueSelph/jvserve/test-jvserve.yaml)
-![GitHub issues](https://img.shields.io/github/issues/TrueSelph/jvserve)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/TrueSelph/jvserve)
-![GitHub](https://img.shields.io/github/license/TrueSelph/jvserve)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/TrueSelph/jvclient)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/TrueSelph/jvclient/test-jvclient.yaml)
+![GitHub issues](https://img.shields.io/github/issues/TrueSelph/jvclient)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/TrueSelph/jvclient)
+![GitHub](https://img.shields.io/github/license/TrueSelph/jvclient)
 
-`jvserve` is a FastAPI-based web server designed for loading and interacting with JIVAS agents. It is built on top of [`jac-cloud`](https://github.com/Jaseci-Labs/jaseci/tree/main/jac-cloud) and provides a robust platform for managing jivas agent jobs, handling webhooks, and executing actions within the JIVAS ecosystem.
+`jvclient` is a UI library for building JIVAS applications.
 
 ## Installation
 
@@ -23,8 +23,8 @@ To use `jvclient`, import the required utility functions or widgets into your st
 
 ## 🔰 Contributing
 
-- **🐛 [Report Issues](https://github.com/TrueSelph/jvserve/issues)**: Submit bugs found or log feature requests for the `jvserve` project.
-- **💡 [Submit Pull Requests](https://github.com/TrueSelph/jvserve/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
+- **🐛 [Report Issues](https://github.com/TrueSelph/jvclient/issues)**: Submit bugs found or log feature requests for the `jvclient` project.
+- **💡 [Submit Pull Requests](https://github.com/TrueSelph/jvclient/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
 
 <details closed>
 <summary>Contributing Guidelines</summary>
@@ -32,7 +32,7 @@ To use `jvclient`, import the required utility functions or widgets into your st
 1. **Fork the Repository**: Start by forking the project repository to your GitHub account.
 2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
    ```sh
-   git clone https://github.com/TrueSelph/jvserve
+   git clone https://github.com/TrueSelph/jvclient
    ```
 3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
    ```sh
