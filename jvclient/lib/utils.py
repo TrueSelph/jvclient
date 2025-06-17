@@ -59,9 +59,9 @@ def call_api(
 ) -> Optional[requests.Response]:
     """Generic function to call an API endpoint."""
 
-    JIVAS_BASE_URL = os.environ.get("JIVAS_BASE_URL", "http://localhost:8000")
+    jivas_base_url = os.environ.get("JIVAS_BASE_URL", "http://localhost:8000")
     if not endpoint.startswith("http"):
-        endpoint = f"{JIVAS_BASE_URL}/{endpoint}"
+        endpoint = f"{jivas_base_url}/{endpoint}"
 
     ctx = get_user_info()  # Assumes a function that fetches user info
 
@@ -103,8 +103,8 @@ def call_action_walker_exec(
 ) -> list:
     """Call the API to execute a walker action for a given agent."""
 
-    JIVAS_BASE_URL = os.environ.get("JIVAS_BASE_URL", "http://localhost:8000")
-    endpoint = f"{JIVAS_BASE_URL}/action/walker"
+    jivas_base_url = os.environ.get("JIVAS_BASE_URL", "http://localhost:8000")
+    endpoint = f"{jivas_base_url}/action/walker"
 
     # Create form data
     data = {"agent_id": agent_id, "module_root": module_root, "walker": walker}
