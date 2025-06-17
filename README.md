@@ -1,4 +1,4 @@
-# JIVAS Web Server (jvserve)
+# JVClient (jvclient)
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/TrueSelph/jvserve)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/TrueSelph/jvserve/test-jvserve.yaml)
@@ -10,59 +10,16 @@
 
 ## Installation
 
-To install `jvserve`, use `pip`:
+To install `jvclient`, use `pip`:
 
 ```sh
-pip install jvserve
+pip install jvclient
 ```
 
 ## Usage
 
-To use `jvserve`, you can start the server with the following command:
+To use `jvclient`, import the required utility functions or widgets into your streamlit application
 
-```sh
-jac jvserve <path_to_your_jac_file>
-```
-
-For example:
-
-```sh
-jac jvserve main.jac
-```
-
-You can also start a file server to serve static files:
-
-```sh
-jac jvfileserve <directory>
-```
-
-For example:
-
-```sh
-jac jvfileserve ./static
-```
-
-### Supported Arguments
-
-- **filename**: Path to your JAC file.
-- **host**: Host address to bind the server (default: `0.0.0.0`).
-- **port**: Port number to bind the server (default: `8000`).
-- **loglevel**: Logging level (default: `INFO`).
-- **workers**: Number of worker processes (optional).
-
-Example with all arguments:
-
-```sh
-jac jvserve main.jac --host 127.0.0.1 --port 8080 --loglevel DEBUG --workers 4
-```
-
-## API Endpoints
-
-- **Interact with Agent**: `/interact` (POST)
-- **Execute Webhook**: `/webhook/{key}` (GET, POST)
-- **Execute Action Walker**: `/action/walker` (POST)
-
-You can see all endpoints at the URL `/docs`.
 
 ## 🔰 Contributing
 
@@ -98,8 +55,8 @@ You can see all endpoints at the URL `/docs`.
 <summary>Contributor Graph</summary>
 <br>
 <p align="left">
-    <a href="https://github.com/TrueSelph/jvserve/graphs/contributors">
-        <img src="https://contrib.rocks/image?repo=TrueSelph/jvserve" />
+    <a href="https://github.com/TrueSelph/jvclient/graphs/contributors">
+        <img src="https://contrib.rocks/image?repo=TrueSelph/jvclient" />
    </a>
 </p>
 </details>
@@ -107,7 +64,3 @@ You can see all endpoints at the URL `/docs`.
 ## 🎗 License
 
 This project is protected under the Apache License 2.0. See [LICENSE](./LICENSE) for more information.
-
-## Additional Information
-
-Since `jvserve` is a wrapper around `jac-cloud`, it supports all the primitives available in `jac-cloud`. You can find more information about `jac-cloud` primitives [here](https://www.jac-lang.org/for_coders/jac-cloud/jac_cloud/).
