@@ -77,6 +77,10 @@ def app_controls(
 
     # Generate a dynamic key for the session state using the action_id
     model_key = f"model_{agent_id}_{action_id}"
+    
+    default_hidden_keys = [
+        "data"
+    ]
 
     # Combine default masked keys with additional keys specified in 'masked'
     default_masked_keys = [
@@ -88,18 +92,19 @@ def app_controls(
         "secret_key",
     ]
     all_masked_keys = set(default_masked_keys + masked)
+    all_hidden_keys = set(default_hidden_keys + hidden)
 
     # Recursive function to handle nested dictionaries
     def render_fields(item_key: str, value: Any, parent_key: str = "") -> None:
         """Render fields based on their type."""
 
         # Skip rendering if the field is in the hidden list
-        if item_key in hidden:
+        if item_key.lower() in all_hidden_keys:
             return
 
         field_type = type(value)
         label = snake_to_title(item_key)  # Convert item_key to Title Case
-
+        
         # Special case for masked fields to render as a password field
         if item_key.lower() in all_masked_keys:
             st.session_state[model_key][item_key] = st.text_input(
